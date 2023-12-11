@@ -9,7 +9,7 @@
 
 body{
     font-family: 'Exo', sans-serif;
-    background-color: #000;
+    background-color: rgb(228, 230, 230);
     /* height: 100%; */
 }
 
@@ -17,10 +17,11 @@ body{
   display: flex;
   position: fixed;
   height: 100%;
-  background: #4e54c8;  
-  background: linear-gradient(345deg, #06dbfee3, #a1e8f7a8, #f8fdfeba);
+  background-image: url("/assets/fondo.svg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; 
   width: 100%;
-  /* height:100%; */
 }
 .circles{
     position: absolute;
@@ -36,7 +37,7 @@ body{
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(133, 160, 160, 0.363);
     animation: animate 25s linear infinite;
     bottom: -150px;
 }
@@ -53,14 +54,12 @@ body{
     animation-delay: 2s;
     animation-duration: 12s;
 }
-
 .circles li:nth-child(3){
     left: 70%;
     width: 20px;
     height: 20px;
     animation-delay: 4s;
 }
-
 .circles li:nth-child(4){
     left: 40%;
     width: 60px;
@@ -68,25 +67,23 @@ body{
     animation-delay: 0s;
     animation-duration: 18s;
 }
-
 .circles li:nth-child(5){
     left: 65%;
     width: 20px;
     height: 20px;
     animation-delay: 0s;
 }
-
 .circles li:nth-child(6){
     left: 75%;
-    width: 110px;
-    height: 110px;
+    width: 70px;
+    height: 70px;
     animation-delay: 3s;
 }
 
 .circles li:nth-child(7){
     left: 35%;
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
     animation-delay: 7s;
 }
 
@@ -108,8 +105,8 @@ body{
 
 .circles li:nth-child(10){
     left: 85%;
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
     animation-delay: 0s;
     animation-duration: 11s;
 }
@@ -124,7 +121,7 @@ body{
 
     100%{
         transform: translateY(-1000px) rotate(720deg);
-        opacity: 0;
+        opacity: 0.1;
         border-radius: 50%;
     }
 
@@ -136,23 +133,33 @@ div.fondo {
   background-color: rgb(165, 164, 164);
   height: 100vh;
   width: 100vw;
+  transition: background-color 2s linear;
+ 
 }
+
 
 div.codepen {
   display: block;
   position: relative;
   top: 50%;
-  height: 16em;
-  width: 16em;
+  height: 8.5em;
+  width: 24em;
   margin: -8em auto 0;
-  border-radius: 8em;
+  border-radius: 3em;
   background-color: #121212;
   cursor: pointer;
   transition: color 0.8s linear, background 0.8s linear, box-shadow 0.1s linear, transform 0.1s linear;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 div.codepen:hover {
   background-color: #DCDCDC;
 }
+div.codepen:hover + div.fondo{
+  background-color: #3b3b3b;
+  
+}
+
 div.codepen::before {
   content: '';
   position: absolute;
@@ -179,10 +186,6 @@ div.codepen:hover::before, div.codepen:hover::after {
   width: 100%;
   top: 40vh;
   position: absolute;
-}
-
-img {
-  width: 183 px;
 }
 
 button {
@@ -413,4 +416,49 @@ button::before {
   justify-content: center;
 }
 
+.content-logo {
+  display: block;
+  height: inherit;
+  background-image: url(/assets/logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
 
+.barra-menu{
+  padding: 40px 10px 10px 30px;
+  display: flex;
+  width: inherit;
+  height: 66px;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99999;
+}
+.logo-menu {
+  background-image: url("/assets/logo.png");
+    background-position: left;
+    width: 280px;
+    height: inherit;
+    background-size: cover;
+}
+.menu {
+  display: flex;
+  position: relative;
+  left: 0;
+  align-items: center;
+
+}
+.columns {
+  width: 150px;
+  font-weight: bold;
+}
+.menu p {
+  transition: transform 0.5s ;
+}
+
+.menu p:hover {
+  cursor: pointer;
+  text-shadow: 1px 2px rgb(139, 139, 139);
+  transform: scale(1.1, 1);
+  
+}
