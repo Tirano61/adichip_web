@@ -135,7 +135,7 @@ div.fondo {
   height: 100vh;
   width: 100vw;
   transition: background-color 2s linear;
- 
+  z-index: 9999;
 }
 
 
@@ -185,7 +185,7 @@ div.codepen:hover::before, div.codepen:hover::after {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  top: 40vh;
+  top: 35vh;
   position: absolute;
 }
 
@@ -428,7 +428,7 @@ button::before {
 
 .barra-menu{
   position: absolute;
-  padding: 40px 10px 10px 30px;
+  padding: 26px 10px 10px 20px;
   display: flex;
   height: 66px;
   align-items: center;
@@ -499,6 +499,12 @@ a {
   position: absolute;
   opacity: 0;
 }
+nav {
+      display: block;
+        position: fixed;
+        width: 100vw;
+        z-index: 9;
+}
 
 
 @media ( min-width: 1064px ) {
@@ -513,6 +519,9 @@ a {
 }
 
 @media (max-width: 858px ) {
+  div.context {
+    top: 23vh;
+  }
   div.fondo {
     position: fixed;
     display: block;
@@ -521,7 +530,7 @@ a {
     width: 100vw;
     transition: background-color 2s linear;
     top: 0;
-    z-index: 99999999;
+    z-index: 9999999;
   }
   div.codepen {
     display: block;
@@ -543,36 +552,43 @@ a {
     width: 100vw;
   }
   nav {
-    background-color: antiquewhite;
+    background-color: #d7eef4;
+    display: block;
+    position: fixed;
+    width: 100vw;
+    z-index: 9;
+    height: 100px;
   }
   .menu {
-    position: relative;
-    display: none;
+    position: absolute;
+    /* display: none; */
     height: 350px;
     top: 96px;
-    right: -1000px ;
+    right: -800px ;
     width: 296px;
-    background-color: #84c7d8db;
-    transition: 1s;
+    background-color: #d7eef4;
+    transition: 2s;
   }
   
   .checkbtn {
     position: relative;
     display: block;
-    top: 62px;
+    top: 49px;
     float: inline-end;
     font-size: 20px;
     z-index: 9;
+    margin-right: 40px;
   }
   #check {
     &:checked ~ .menu {
-      position: relative;
+      position: absolute;
       display: block;
       top: 96px;
-      right: -35px;
-      /* float: inline-end; */
+      right: 0;
+      float: inline-end;
       font-size: 20px;
       z-index: 9;
+      transition: 2s;
     }
   }
  
