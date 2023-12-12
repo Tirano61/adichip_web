@@ -17,29 +17,37 @@
   <link rel="stylesheet" media="all" href="homeStyles.css" />
 </head>
 <body>
-  <div class="barra-menu">
-    <div class="logo-menu"></div>
-  </div>
-
-  <div class="menu">
-    <ul class="navbar">
-      <li><a class="link" href="https://adichip.net/tienda/mi-cuenta/">MI CUENTA</a></li>
-      <li><a class="link" href="https://adichip.net/tienda/modulo-step-down-lm2596-con-voltimetro-y-display-de-7-segmentos/">BLOG</a></li>
-      <li><a class="link" href="https://adichip.net/tienda/adichip-electronics-importador-mayorista/">INGENIERIA ELECTRONICA</a></li>
-      <li><a class="link" href="https://adichip.net/tienda/?product_cat=0&s=dise%C3%B1o+de+hardware&post_type=product">DESEÑO DE HARDWARE</a></li>
-      <li><a class="link tienda" href="https://adichip.net/tienda/">TIENDA</a><i class="fa-solid fa-cart-shopping"></i></li>
-    </ul>
+  <!-- menu -->
+  <nav>
+    <div class="barra-menu">
+      <div class="logo-menu"></div>
+    </div>
     <label for="check" class="checkbtn">
       <i class="fas fa-bars"></i>
-    </label>
-
+    </label> <!-- icono menu -->
+    <input type="checkbox" name="" id="check">
+    
+    <div class="menu">
+      <ul class="navbar">
+        <li><a class="link" href="https://adichip.net/tienda/mi-cuenta/">MI CUENTA</a></li>
+        <li><a class="link" href="https://adichip.net/tienda/modulo-step-down-lm2596-con-voltimetro-y-display-de-7-segmentos/">BLOG</a></li>
+        <li><a class="link" href="https://adichip.net/tienda/adichip-electronics-importador-mayorista/">INGENIERIA ELECTRONICA</a></li>
+        <li><a class="link" href="https://adichip.net/tienda/?product_cat=0&s=dise%C3%B1o+de+hardware&post_type=product">DESEÑO DE HARDWARE</a></li>
+        <li><a class="link tienda" href="https://adichip.net/tienda/">TIENDA</a><i class="fa-solid fa-cart-shopping"></i></li>
+      </ul>
+    </div> 
+  </nav>
+ 
+ 
+  <!-- Fondo de la pantalla inicial -->
+  <div class="fondo" id="cuadrado">
+    <div class="codepen" id="logo" >
+      <div class="content-logo">
+      </div>
+    </div>  
   </div>
-  
-  <div class="area" >
-
-    
-    
-    
+  <!-- Animacion de burbujas -->
+  <div class="area" >  
     <ul class="circles">
       <li></li>
       <li></li>
@@ -98,15 +106,10 @@
           <button><div></div></button>
         </div>
       </a>
-    </div>
+  </div>
 
-    <div class="fondo" id="cuadrado">
-      <div class="codepen" id="logo" >
-        <div class="content-logo">
-        </div>
-      </div>  
-    </div>
- 
+  
+
   <script src="efect.js"></script>
 </body>
 </html>
